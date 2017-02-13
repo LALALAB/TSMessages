@@ -283,6 +283,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
         [self.titleLabel setText:title];
         [self.titleLabel setTextColor:fontColor];
         [self.titleLabel setBackgroundColor:[UIColor clearColor]];
+        [self.titleLabel setTextAlignment:NSTextAlignmentCenter];
 
         NSLog(@"self.frame.size.width %f", self.frame.size.width);
 
@@ -332,7 +333,8 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
             [self.contentLabel setShadowOffset:self.titleLabel.shadowOffset];
             self.contentLabel.lineBreakMode = self.titleLabel.lineBreakMode;
             self.contentLabel.numberOfLines = 0;
-
+            [self.contentLabel setTextAlignment:NSTextAlignmentCenter];
+            
             [self addSubview:self.contentLabel];
         }
 
